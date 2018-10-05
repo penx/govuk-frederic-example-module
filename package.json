@@ -26,6 +26,7 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
+    "react-emotion": "*",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
   },
@@ -60,5 +61,8 @@
   "homepage": "https://github.com/penx/govuk-frederic-example-module#readme",
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@govuk-react/constants": "^0.2.7"
+  }
 }

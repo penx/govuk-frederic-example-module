@@ -1,22 +1,37 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'react-emotion'
 
-import styles from './styles.css'
+import { SPACING } from '@govuk-react/constants'
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
+const StyledSection = styled('div')({
+  width: '100%'
+})
 
-  render() {
-    const {
-      text
-    } = this.props
+const Welcome = styled('div')({
+  padding: SPACING.SCALE_3
+})
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+const PageLinks = styled('div')({
+  padding: SPACING.SCALE_3
+})
+
+const Heading = styled('div')({
+  fontSize: '36px',
+  fontWeight: 'bold',
+  width: '100%',
+  borderBottom: '1px solid #bfc1c3',
+  paddingBottom: SPACING.SCALE_5
+})
+
+const Home = () => (
+  <StyledSection>
+    <Welcome>
+      <Heading>Component prototype</Heading>
+    </Welcome>
+    <PageLinks>
+      Example link
+    </PageLinks>
+  </StyledSection>
+)
+
+export default Home
