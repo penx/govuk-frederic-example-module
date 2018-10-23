@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'react-emotion'
 
 import { SPACING } from '@govuk-react/constants'
@@ -23,7 +24,11 @@ const Heading = styled('div')({
   paddingBottom: SPACING.SCALE_5
 })
 
-const Home = () => (
+const Body = styled('div')({
+  padding: SPACING.SCALE_3
+})
+
+const Home = ({children}) => (
   <StyledSection>
     <Welcome>
       <Heading>Component prototype</Heading>
@@ -31,7 +36,16 @@ const Home = () => (
     <PageLinks>
       Example link
     </PageLinks>
+    {children && <Body>{children}</Body>}
   </StyledSection>
 )
+
+Home.propTypes = {
+  children: PropTypes.node
+}
+
+Home.defaultProps = {
+  children: undefined
+}
 
 export default Home
