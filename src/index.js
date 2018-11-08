@@ -4,6 +4,8 @@ import styled from 'react-emotion'
 
 import { SPACING } from '@govuk-react/constants'
 
+import { Page } from 'govuk-react'
+
 const StyledSection = styled('div')({
   width: '100%'
 })
@@ -29,7 +31,7 @@ const Body = styled('div')({
 })
 
 const Home = ({children}) => (
-  <StyledSection>
+  <Page.Main>
     <Welcome>
       <Heading>Component prototype</Heading>
     </Welcome>
@@ -37,7 +39,7 @@ const Home = ({children}) => (
       Example link
     </PageLinks>
     {children && <Body>{children}</Body>}
-  </StyledSection>
+  </Page.Main>
 )
 
 Home.propTypes = {
