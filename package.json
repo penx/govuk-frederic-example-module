@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/example-module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Example React application module for govuk-frederic",
   "main": "dist/index.js",
   "author": "Alasdair McLeay",
